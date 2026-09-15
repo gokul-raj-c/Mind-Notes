@@ -1,0 +1,10 @@
+PS D:\MindNotes - FastAPI> python -m venv venv                                                                                      
+PS D:\MindNotes - FastAPI> venv\Scripts\activate                                                                                    
+(venv) PS D:\MindNotes - FastAPI> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "d:\MindNotes - FastAPI\venv\Scripts\Activate.ps1")
+(venv) PS D:\MindNotes - FastAPI> pip install "fastapi[standard]"
+
+(venv) PS D:\MindNotes - FastAPI> pip show fastapi
+Name: fastapi
+Version: 0.141.1
+
+(venv) PS D:\MindNotes - FastAPI> fastapi dev main.py  
