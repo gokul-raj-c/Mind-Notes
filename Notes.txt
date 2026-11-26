@@ -1,0 +1,21 @@
+PS D:\Mind-Notes> python -m venv venv         
+PS D:\Mind-Notes> venv\Scripts\activate     
+
+(venv) PS D:\Mind-Notes> pip install "fastapi[standard]"         
+
+(venv) PS D:\Mind-Notes> fastapi dev main.py  #to run
+
+1. response_class=HTMLResponse
+It tells FastAPI that the endpoint should return an HTML response instead of the default JSON response.
+
+from fastapi.responses import HTMLResponse
+@app.get("/posts", response_class=HTMLResponse, include_in_schema=False)
+def home():
+    return f"<h1>{posts[0]['title']}</h1>"
+
+2. include_in_schema=False
+FastAPI automatically generates API documentation using Swagger UI and ReDoc.
+- include_in_schema=True (default): Endpoint appears in API documentation.
+- include_in_schema=False: Endpoint is hidden from the generated API documentation.
+
+Pydantic - data validation library that use python type hints
